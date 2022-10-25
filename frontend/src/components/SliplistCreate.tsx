@@ -16,7 +16,7 @@ import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
-import { StudentlistInterface } from "../interfaces/IStudentlist";
+import { StudentListInterface } from "../interfaces/IStudentlist";
 import { PaymentstatusInterface } from "../interfaces/IPaymentstatus";
 import { BankingInterface } from "../interfaces/IBanking";
 import { SliplistInterface } from "../interfaces/ISliplist";
@@ -36,7 +36,7 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
 
 function SliplistCreate() {
   const [bankings, setBankings] = useState<BankingInterface[]>([]);
-  const [studentlists, setStudentlists] = useState<StudentlistInterface[]>([]);
+  const [studentlists, setStudentlists] = useState<StudentListInterface[]>([]);
   const [paymentstatuses, setPaymentstatus] = useState<PaymentstatusInterface[]>([]);
 
   const [slipList, setSliplist] = useState<SliplistInterface>({
@@ -64,6 +64,7 @@ function SliplistCreate() {
       ...slipList,
       [name]: event.target.value,
     });
+    console.log(slipList)
   };
 
   const handleInputChange = (
@@ -197,13 +198,13 @@ function SliplistCreate() {
                 value={slipList.StudentListID + ""}
                 onChange={handleChange}
                 inputProps={{
-                  name: "ID",
+                  name: "StudentListID",
                 }}
               >
                 <option aria-label="None" value="">
                   เลือกนักศึกษาที่ถูกคัดเลือก
                 </option>
-                {studentlists.map((item: StudentlistInterface) => (
+                {studentlists.map((item: StudentListInterface) => (
                   <option value={item.ID} key={item.ID}>
                     {item.ID}
                   </option>

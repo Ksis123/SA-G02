@@ -6,6 +6,8 @@ function Home() {
   return (
     <div>
       <Box sx={{ paddingX: 2, paddingY: 1 }}>
+            
+            
             <Typography
               component="h2"
               variant="h6"

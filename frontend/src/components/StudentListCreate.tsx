@@ -19,7 +19,7 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 import { ReportInterface } from "../interfaces/IReport";
 import { StatusInterface } from "../interfaces/IStatus";
-import { StudentlistInterface } from "../interfaces/IStudentlist";
+import { StudentListInterface } from "../interfaces/IStudentlist";
 
 
 import {
@@ -37,7 +37,7 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
 function StudentListCreate() {
   const [reports, setReports] = useState<ReportInterface[]>([]);
   const [statuses, setStatuses] = useState<StatusInterface[]>([]);
-  const [studentList, setStudentList] = useState<StudentlistInterface>({
+  const [studentList, setStudentList] = useState<StudentListInterface>({
     SaveTime: new Date(),
   });
 

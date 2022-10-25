@@ -3,7 +3,7 @@ import { SigninInterface } from "../interfaces/ISignin";
 import { AdminInterface } from "../interfaces/IAdmin";
 import { SliplistInterface } from "../interfaces/ISliplist";
 
-import { StudentlistInterface } from "../interfaces/IStudentlist";
+import { StudentListInterface } from "../interfaces/IStudentlist";
 import { ScholarshipInterface } from "../interfaces/IScholarship";
 import { ScholarshipStatusInterface } from "../interfaces/IScholarshipstatus";
 
@@ -257,7 +257,7 @@ async function GetStatus() {
   return res;
 }
 
-async function StudentLists(data: StudentlistInterface) {
+async function StudentLists(data: StudentListInterface) {
   const requestOptions = {
     method: "POST",
     headers: {

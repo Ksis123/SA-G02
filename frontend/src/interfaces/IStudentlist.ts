@@ -1,16 +1,16 @@
 import { ReportInterface } from "./IReport";
 import { StatusInterface } from "./IStatus";
 
-export interface StudentlistInterface {
+export interface StudentListInterface {
     ID?: number,
     ReportID? : number,
-	  Report?   :  ReportInterface,
+	  Report?   : ReportInterface,
+
     Reason?: string,
     Amount?: number,
 
-
 	  StatusID? : number,
 	  Status?   : StatusInterface,
-    SaveTime?  : Date | null,
+    SaveTime? : Date | null,
   }
   

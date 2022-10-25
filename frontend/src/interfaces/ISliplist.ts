@@ -1,6 +1,6 @@
 import { BankingInterface } from "./IBanking";
 import { PaymentstatusInterface } from "./IPaymentstatus";
-import { StudentlistInterface } from "./IStudentlist";
+import { StudentListInterface } from "./IStudentlist";
 
 export interface SliplistInterface {
   ID?: number;
@@ -10,6 +10,7 @@ export interface SliplistInterface {
   Banking?: BankingInterface;
   PayID?: number;
   Pay?: PaymentstatusInterface;
+
   StudentListID?: number;
-  StudentList?: StudentlistInterface;
+  StudentList?: StudentListInterface;
 }
