@@ -116,6 +116,7 @@ const menu = [
  { name: "การจัดการทุน", icon: <PaidIcon color="primary" />, path: "/sholarship" },
  { name: "ผู้ให้ทุน", icon: <BusinessCenterIcon color="primary" />, path: "/donator" },
  { name: "บันทึกข้อมูลธุรกรรมการเงินทุนการศึกษา", icon: <ReceiptIcon color="primary" />, path: "/sliplist" },
+ 
 ];
 
 function App() {
