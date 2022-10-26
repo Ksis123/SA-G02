@@ -18,6 +18,9 @@ type Organization struct {
 type Donator struct {
 	gorm.Model
 
+	AdminID *uint
+	Admin   Admin
+
 	UserName string
 	DateTime string
 	UserInfo string

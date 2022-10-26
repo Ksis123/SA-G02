@@ -19,7 +19,9 @@ type Scholarships_type struct {
 type Scholarship struct {
 	gorm.Model
 	Scholarship_Name string
-	theAdmin         Admin
+	
+	AdminID *uint
+	Admin   Admin
 
 	StatusID  *uint
 	thestatus Scholarships_status

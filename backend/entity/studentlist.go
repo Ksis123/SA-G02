@@ -21,6 +21,9 @@ type StudentList struct {
 	Reason string
 	Amount int
 
+	AdminID *uint
+	Admin   Admin
+
 	ReportID *int
 	Report   Report `gorm:"references:id"`
 

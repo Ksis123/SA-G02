@@ -6,14 +6,7 @@ import (
 	"gorm.io/gorm"
 )
 
-type Admin struct {
-	gorm.Model
-	Name      string
-	Email     string     `gorm:"uniqueIndex"`
-	Password  string     `json:"-"`
-	SlipLists []SlipList `gorm:"foreignKey:AdminID"`
 
-}
 type Banking struct {
 	gorm.Model
 	Name      string
