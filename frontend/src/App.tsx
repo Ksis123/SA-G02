@@ -111,7 +111,7 @@ const mdTheme = createTheme({
 })
 
 const menu = [
- { name: "หน้าหลัก", icon: <HomeIcon color="primary" />, path: "/" },
+ { name: "หน้าหลัก", icon: <HomeIcon color="primary" />, path: "/home" },
  { name: "คัดเลือกนักศึกษา", icon: <HowToRegIcon color="primary" />, path: "/studentlist" },
  { name: "การจัดการทุน", icon: <PaidIcon color="primary" />, path: "/sholarship" },
  { name: "ผู้ให้ทุน", icon: <BusinessCenterIcon color="primary" />, path: "/donator" },
@@ -137,7 +137,7 @@ function App() {
     return <Logins />;
   }
 
-  const signout = () => {
+  const logout = () => {
     localStorage.clear();
     window.location.href = "/";
   };
@@ -168,7 +168,7 @@ function App() {
               <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                 G02 : ระบบทุนการศึกษา
               </Typography>
-              <Button variant="outlined" color="inherit" onClick={signout}>
+              <Button variant="outlined" color="inherit" onClick={logout}>
                 Log out
               </Button>
             </Toolbar>
@@ -217,7 +217,7 @@ function App() {
             <Toolbar />
             <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Routes>
-              <Route  path="/" element={<Home />} />
+              <Route  path="/home" element={<Home />} />
               <Route  path="/sliplist/create" element={<SliplistCreate />} />
               <Route  path="/sliplist" element={<Sliplist />} /> 
               <Route  path="/studentlist" element={<StudentListCreate />} /> 

@@ -13,7 +13,7 @@ import Typography from "@mui/material/Typography";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert, { AlertProps } from "@mui/material/Alert";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { SigninInterface } from "../interfaces/ISignin";
+import { LoginInterface } from "../interfaces/ILogin";
 import { Login } from "../services/HttpClientServer";
 
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
@@ -38,16 +38,16 @@ const theme = createTheme({
   },
 })
 function Logins() {
-  const [signin, setSignin] = useState<Partial<SigninInterface>>({});
+  const [login, setLogin] = useState<Partial<LoginInterface>>({});
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
 
   const handleInputChange = (
     event: React.ChangeEvent<{ id?: string; value: any }>
   ) => {
-    const id = event.target.id as keyof typeof signin;
+    const id = event.target.id as keyof typeof login;
     const { value } = event.target;
-    setSignin({ ...signin, [id]: value });
+    setLogin({ ...login, [id]: value });
   };
 
   const handleClose = (
@@ -62,7 +62,7 @@ function Logins() {
   };
 
   const submit = async () => {
-    let res = await Login(signin);
+    let res = await Login(login);
     if (res) {
       setSuccess(true);
       setTimeout(() => {
@@ -126,7 +126,7 @@ function Logins() {
                 name="email"
                 autoComplete="email"
                 autoFocus
-                value={signin.Email || ""}
+                value={login.Email || ""}
                 onChange={handleInputChange}
               />
               <TextField
@@ -138,7 +138,7 @@ function Logins() {
                 type="password"
                 id="Password"
                 autoComplete="current-password"
-                value={signin.Password || ""}
+                value={login.Password || ""}
                 onChange={handleInputChange}
               />
               <FormControlLabel

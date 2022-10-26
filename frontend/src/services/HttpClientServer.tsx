@@ -1,5 +1,5 @@
 import React from "react";
-import { SigninInterface } from "../interfaces/ISignin";
+import { LoginInterface } from "../interfaces/ILogin";
 import { AdminInterface } from "../interfaces/IAdmin";
 import { SliplistInterface } from "../interfaces/ISliplist";
 
@@ -14,7 +14,7 @@ import { DonatorInterface } from "../interfaces/IDonator";
 const apiUrl = "http://localhost:5000";
 
 //-----Admin----Sliplist----Signin
-async function Login(data: SigninInterface) {
+async function Login(data: LoginInterface) {
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
