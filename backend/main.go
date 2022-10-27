@@ -44,8 +44,6 @@ func main() {
 			router.GET("/Sliplist", controller.SlipList)
 			router.GET("/Sliplist/:id", controller.GetSlipList)
 			router.POST("/Sliplist", controller.CreateSlipList)
-			router.PATCH("/Sliplist", controller.UpdateSlipList)
-			router.DELETE("/Sliplist/:id", controller.DeleteSlipList)
 
 			// StudentList Routes
 			router.GET("/studentlist", controller.ListStatuses)
@@ -110,11 +108,46 @@ func main() {
 			router.PATCH("/donators", controller.UpdateDonator)
 			router.DELETE("/donator/:id", controller.CreateDonator)
 
+			//ระบบลงทะเบียนข้อมูลนักศึกษา---------------------------------------------------------------
+			// Student Routes
+			router.GET("/students", controller.ListStudents)
+			router.GET("/student/:user_id", controller.GetStudentByUser)
+			router.POST("/students", controller.CreateStudent)
+			router.PATCH("/students", controller.UpdateStudent)
+			router.DELETE("/students/:id", controller.DeleteStudent)
+
+			// User Routes
+			router.GET("/users", controller.ListUsers)
+			router.GET("/user/:id", controller.GetUser)
+			router.GET("/user/email/:id", controller.GetUserEmailByUser)
+			router.PATCH("/users", controller.UpdateUser)
+			router.DELETE("/users/:id", controller.DeleteUser)
+
+			// Year Routes
+			router.GET("/years", controller.ListYears)
+			router.GET("/year/:id", controller.GetYear)
+			router.POST("/years", controller.CreateYear)
+			router.PATCH("/years", controller.UpdateYear)
+			router.DELETE("/years/:id", controller.DeleteUser)
+
+			// Faculty Routes
+			router.GET("/faculties", controller.ListFaculties)
+			router.GET("/faculty/:id", controller.GetFaculty)
+			router.POST("/faculties", controller.CreateFaculty)
+			router.PATCH("/faculties", controller.UpdateFaculty)
+			router.DELETE("/faculties/:id", controller.DeleteFaculty)
+
+			// Advisor Routes
+			router.GET("/advisors", controller.ListAdvisors)
+			router.GET("/advisor/:id", controller.GetAdvisor)
+			router.POST("/advisors", controller.CreateAdvisor)
+			router.PATCH("/advisors", controller.UpdateAdvisor)
+			router.DELETE("/advisors/:id", controller.DeleteAdvisor)
+
 		}
 	}
 
 	// Signup User Route
-	r.POST("/signup", controller.CreateAdmins)
 	// // login User Route
 	r.POST("/login", controller.Login)
 	// Run the server go run main.go
@@ -123,7 +156,7 @@ func main() {
 
 func CORSMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
-		c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
+		c.Writer.Header().Set("Access-Control-Allow-Origin", "*")// Api เปิด Public
 		c.Writer.Header().Set("Access-Control-Allow-Credentials", "true")
 		c.Writer.Header().Set("Access-Control-Allow-Headers", "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With")
 		c.Writer.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS, GET, PUT")

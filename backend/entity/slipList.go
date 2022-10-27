@@ -6,7 +6,6 @@ import (
 	"gorm.io/gorm"
 )
 
-
 type Banking struct {
 	gorm.Model
 	Name      string
@@ -30,7 +29,6 @@ type PaymentStatus struct {
 
 type SlipList struct {
 	gorm.Model
-	Name     string
 	Total    float64
 	Slipdate time.Time
 

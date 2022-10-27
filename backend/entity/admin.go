@@ -9,6 +9,8 @@ type Admin struct {
 	Name          string
 	Email         string        `gorm:"uniqueIndex"`
 	Password      string        `json:"-"`
+	Role		  string
+
 	SlipLists     []SlipList    `gorm:"foreignKey:AdminID"`
 	Donators      []Donator     `gorm:"foreignKey:AdminID"`
 	Scholarshipes []Scholarship `gorm:"foreignKey:AdminID"`

@@ -17,20 +17,15 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Button from "@mui/material/Button";
 
-import SearchIcon from "@mui/icons-material/Search";
-import FaceIcon from '@mui/icons-material/Face';
-import GroupIcon from '@mui/icons-material/Group';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
-import SchoolIcon from '@mui/icons-material/School';
-import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
+
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import PaidIcon from '@mui/icons-material/Paid';
 import ReceiptIcon from '@mui/icons-material/Receipt';
 
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import HomeIcon from "@mui/icons-material/Home";
-import PeopleIcon from "@mui/icons-material/People";
-import YouTubeIcon from "@mui/icons-material/YouTube";
+
 
 import Home from "./components/Home";
 
@@ -38,11 +33,8 @@ import SliplistCreate from "./components/SliplistCreate";
 import Sliplist from "./components/Sliplist";
 
 import Logins from "./components/Logins";
-
 import StudentListCreate from "./components/StudentListCreate";
-
 import ScholarshipCreate from "./components/ScholarshipCreate";
-
 import DonatorCreate from "./components/DonatorCreate";
 
 const drawerWidth = 340;
